@@ -4,6 +4,7 @@ using System.Fabric;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using IoTHubService.Services;
 using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
@@ -15,9 +16,14 @@ namespace IoTHubService
     /// </summary>
     internal sealed class IoTHubService : StatefulService
     {
-        public IoTHubService(StatefulServiceContext context)
+        private readonly Settings _settings;
+
+        public IoTHubService(StatefulServiceContext context, Settings settings)
             : base(context)
-        { }
+        {
+            _settings = settings;
+
+        }
 
         /// <summary>
         /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or user requests.

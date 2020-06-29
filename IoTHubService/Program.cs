@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using IoTHubService.Services;
 using Microsoft.ServiceFabric.Services.Runtime;
 
 namespace IoTHubService
@@ -21,7 +22,11 @@ namespace IoTHubService
                 // an instance of the class is created in this host process.
 
                 ServiceRuntime.RegisterServiceAsync("IoTHubServiceType",
-                    context => new IoTHubService(context)).GetAwaiter().GetResult();
+                    context => 
+                    {
+                        var settings = new Settings(context);
+                        return new IoTHubService(context,settings);
+                    }).GetAwaiter().GetResult();
 
                 ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(IoTHubService).Name);
 

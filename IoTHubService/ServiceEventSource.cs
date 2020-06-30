@@ -5,12 +5,13 @@ using System.Fabric;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common.MicroServices.Helpers;
 using Microsoft.ServiceFabric.Services.Runtime;
 
 namespace IoTHubService
 {
     [EventSource(Name = "MyCompany-ComDevFabricApp-IoTHubService")]
-    internal sealed class ServiceEventSource : EventSource
+    internal sealed class ServiceEventSource : EventSource, IServiceEventSource
     {
         public static readonly ServiceEventSource Current = new ServiceEventSource();
 
@@ -144,6 +145,11 @@ namespace IoTHubService
         public void ServiceRequestStop(string requestTypeName, string exception = "")
         {
             WriteEvent(ServiceRequestStopEventId, requestTypeName, exception);
+        }
+
+        public void LoggingServiceMessage(ServiceContext serviceContext, string message, params object[] args)
+        {
+            throw new NotImplementedException();
         }
         #endregion
 

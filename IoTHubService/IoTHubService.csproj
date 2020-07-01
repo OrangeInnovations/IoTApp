@@ -13,6 +13,7 @@
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Azure.EventHubs" Version="4.2.0" />
     <PackageReference Include="Microsoft.ServiceFabric" Version="7.1.417" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="4.1.417" />
     <PackageReference Include="Microsoft.ServiceFabric.Data" Version="4.1.417" />
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common.AzureResources\Common.AzureResources.csproj" />
     <ProjectReference Include="..\Common.MicroServices\Common.MicroServices.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>

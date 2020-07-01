@@ -149,7 +149,10 @@ namespace IoTHubService
 
         public void LoggingServiceMessage(ServiceContext serviceContext, string message, params object[] args)
         {
-            throw new NotImplementedException();
+            if(serviceContext is StatefulServiceContext)
+            {
+                ServiceMessage(serviceContext as StatefulServiceContext, message, args);
+            }
         }
         #endregion
 

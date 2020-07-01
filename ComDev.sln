@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonShares", "CommonShare
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.MicroServices", "Common.MicroServices\Common.MicroServices.csproj", "{6784BA51-944B-43C8-8DAA-3BBAEBC55210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C25E08CA-3FAC-4B50-B044-56AE5BE5CEA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C25E08CA-3FAC-4B50-B044-56AE5BE5CEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.AzureResources", "Common.AzureResources\Common.AzureResources.csproj", "{655B465E-F432-4816-854C-CBAD2AECE95B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,14 @@ Global
 		{C25E08CA-3FAC-4B50-B044-56AE5BE5CEA7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C25E08CA-3FAC-4B50-B044-56AE5BE5CEA7}.Release|x64.ActiveCfg = Release|Any CPU
 		{C25E08CA-3FAC-4B50-B044-56AE5BE5CEA7}.Release|x64.Build.0 = Release|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Debug|x64.Build.0 = Debug|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Release|x64.ActiveCfg = Release|Any CPU
+		{655B465E-F432-4816-854C-CBAD2AECE95B}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +70,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6784BA51-944B-43C8-8DAA-3BBAEBC55210} = {366208EC-9C25-4CC2-88CF-5C166759C6FE}
 		{C25E08CA-3FAC-4B50-B044-56AE5BE5CEA7} = {366208EC-9C25-4CC2-88CF-5C166759C6FE}
+		{655B465E-F432-4816-854C-CBAD2AECE95B} = {366208EC-9C25-4CC2-88CF-5C166759C6FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {460629C9-BD07-452E-98EB-D078DFB31B16}

@@ -13,4 +13,17 @@
     <Parameter Name="MyParameter" Value="Value1" />
   </Section>
   -->
+
+  <Section Name="IoTHubServiceConfigSection">
+    <Parameter Name="SqlDBConnectionString" Value="" />
+    <Parameter Name="EventHubListenConnectionString" Value="[EventHubListenConnectionString]" />
+    <Parameter Name="EventHubName" Value="[EventHubName]" />
+    
+    <Parameter Name="OffsetInterval" Value="5" />
+    <Parameter Name="IotHubServiceBackupFrequentSeconds" Value="10" />
+
+    <!--<Parameter Name="ExternalBackupInterval" Value="10" />-->
+    <!--<Parameter Name="StreamRoutingNeedCounting" Value="true" />-->
+    <!--<Parameter Name="EventBatchSize" Value="100" />-->
+  </Section>
 </Settings>

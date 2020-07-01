@@ -4,13 +4,33 @@
     <Parameter Name="IoTHubService_MinReplicaSetSize" DefaultValue="3" />
     <Parameter Name="IoTHubService_PartitionCount" DefaultValue="1" />
     <Parameter Name="IoTHubService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="SqlDBConnectionString" DefaultValue="" />
+    <Parameter Name="EventHubListenConnectionString" DefaultValue="[EventHubListenConnectionString]" />
+    <Parameter Name="EventHubName" DefaultValue="[EventHubName]" />
+    <Parameter Name="OffsetInterval" DefaultValue="5" />
+    <Parameter Name="IotHubServiceBackupFrequentSeconds" DefaultValue="10" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="IoTHubServicePkg" ServiceManifestVersion="1.0.0" />
-    <ConfigOverrides />
+    <ConfigOverrides>
+      <ConfigOverride Name="Config">
+        <Settings>
+          <Section Name="IoTHubServiceConfigSection">
+            <Parameter Name="SqlDBConnectionString" Value="" />
+            <Parameter Name="EventHubListenConnectionString" Value="[EventHubListenConnectionString]" />
+            <Parameter Name="EventHubName" Value="[EventHubName]" />
+            <Parameter Name="OffsetInterval" Value="5" />
+            <Parameter Name="IotHubServiceBackupFrequentSeconds" Value="10" />
+            <!--<Parameter Name="ExternalBackupInterval" Value="10" />-->
+            <!--<Parameter Name="StreamRoutingNeedCounting" Value="true" />-->
+            <!--<Parameter Name="EventBatchSize" Value="100" />-->
+          </Section>
+        </Settings>
+      </ConfigOverride>
+    </ConfigOverrides>
   </ServiceManifestImport>
   <DefaultServices>
     <!-- The section below creates instances of service types, when an instance of this 

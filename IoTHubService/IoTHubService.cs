@@ -37,7 +37,7 @@ namespace IoTHubService
         private readonly IEventHubInfoDataService _eventHubInfoDataService;
 
         private readonly int _offsetInterval = 5;
-        private readonly int _routerServiceBackupFrequentSeconds;
+        private readonly int _serviceBackupFrequentSeconds;
         private readonly Guid _servicePartitionId;
         private readonly Uri _routerServiceUri;
         private int _offsetIteration = 0;
@@ -51,7 +51,7 @@ namespace IoTHubService
         {
             _settings = settings;
             _offsetInterval = settings.OffsetInterval;
-            _routerServiceBackupFrequentSeconds = settings.RouterServiceBackupFrequentSeconds;
+            _serviceBackupFrequentSeconds = settings.IotHubServiceBackupFrequentSeconds;
 
             _servicePartitionId = context.PartitionId;
             ServiceUriBuilder routerServiceNameUriBuilder = new ServiceUriBuilder(Names.RouterServiceName);
@@ -236,8 +236,8 @@ namespace IoTHubService
         {
             try
             {
+                //put business data processing here
                 return true;
-
             }
             catch (Exception e)
             {
@@ -365,7 +365,7 @@ namespace IoTHubService
                 while (true)
                 {
                     cancellationToken.ThrowIfCancellationRequested();
-                    await Task.Delay(TimeSpan.FromSeconds(_routerServiceBackupFrequentSeconds), cancellationToken);
+                    await Task.Delay(TimeSpan.FromSeconds(_serviceBackupFrequentSeconds), cancellationToken);
                     await MicroProcessDataBackupAsync(cancellationToken);
                 }
             }

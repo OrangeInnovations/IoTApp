@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ComDevFabricApp", "ComDevFabricApp\ComDevFabricApp.sfproj", "{97BF53A4-2949-4D41-983A-B2695A117962}"
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "IoTFabricApp", "IoTFabricApp\IoTFabricApp.sfproj", "{97BF53A4-2949-4D41-983A-B2695A117962}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoTHubService", "IoTHubService\IoTHubService.csproj", "{F711C4B1-8386-4BA3-9FC8-347CC6FB82F7}"
 EndProject
@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.MicroServices", "Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C25E08CA-3FAC-4B50-B044-56AE5BE5CEA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.AzureResources", "Common.AzureResources\Common.AzureResources.csproj", "{655B465E-F432-4816-854C-CBAD2AECE95B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.AzureResources", "Common.AzureResources\Common.AzureResources.csproj", "{655B465E-F432-4816-854C-CBAD2AECE95B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
